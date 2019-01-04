@@ -31,8 +31,8 @@ throttle(['throttleDocker']) {
         stage('Deploy to Kubernetes') {
           sh '''
             version=$(date +%Y%m%d%H%M)
-            ./cd/publish.sh prod $version
-            ./cd/deploy-kube.sh prod $version
+            ./cd/publish.sh prod ummiyah $version
+            ./cd/deploy-kube.sh prod ummiyah $version
           '''
         }
       }
