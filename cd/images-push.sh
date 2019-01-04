@@ -11,12 +11,12 @@ export TAG=$3
 echo "Publishing environment: $1, registry: $2, version: $3"
 cd ../build/docker/prod
 
-docker push ummiyah/boxboat/boxboat-blog-dotnet:${TAG}
-docker tag ummiyah/boxboat/boxboat-blog-dotnet:${TAG} ummiyah/boxboat/boxboat-blog-dotnet:latest
-docker push ummiyah/boxboat/boxboat-blog-dotnet:latest
-docker push ummiyah/boxboat/boxboat-blog-nginx:${TAG}
-docker tag ummiyah/boxboat/boxboat-blog-nginx:${TAG} ummiyah/boxboat/boxboat-blog-nginx:latest
-docker push ummiyah/boxboat/boxboat-blog-nginx:latest
-docker push ummiyah/boxboat/boxboat-blog-ui-ssr:${TAG}
-docker tag ummiyah/boxboat/boxboat-blog-ui-ssr:${TAG} ummiyah/boxboat/boxboat-blog-ui-ssr:latest
-docker push ummiyah/boxboat/boxboat-blog-ui-ssr:latest
+docker push ${REGISTRY}/trell300/boxboat-blog-dotnet:${TAG}
+docker tag ${REGISTRY}/trell300/boxboat-blog-dotnet:${TAG} ${REGISTRY}/trell300/boxboat-blog-dotnet:latest
+docker push ${REGISTRY}/trell300/boxboat-blog-dotnet:latest
+docker push ${REGISTRY}/trell300/boxboat-blog-nginx:${TAG}
+docker tag ${REGISTRY}/trell300/boxboat-blog-nginx:${TAG} ${REGISTRY}/trell300/boxboat-blog-nginx:latest
+docker push ${REGISTRY}/trell300/boxboat-blog-nginx:latest
+docker push ${REGISTRY}/trell300/boxboat-blog-ui-ssr:${TAG}
+docker tag ${REGISTRY}/trell300/boxboat-blog-ui-ssr:${TAG} ${REGISTRY}/trell300/boxboat-blog-ui-ssr:latest
+docker push ${REGISTRY}/trell300/boxboat-blog-ui-ssr:latest
