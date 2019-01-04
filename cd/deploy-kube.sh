@@ -9,6 +9,6 @@ export REGISTRY=$2
 export TAG=$3
 
 kubectl set image deployment/boxboat-blog-$DEVENV \
-    dotnet=$REGISTRY/boxboat/boxboat-blog-dotnet:$TAG \
-    nginx=$REGISTRY/boxboat/boxboat-blog-nginx:$TAG \
-    ui-ssr=$REGISTRY/boxboat/boxboat-blog-ui-ssr:$TAG
+    dotnet=$REGISTRY/boxboat-blog-dotnet:$TAG \
+    nginx=$REGISTRY/boxboat-blog-nginx:$TAG \
+    ui-ssr=$REGISTRY/boxboat-blog-ui-ssr:$TAG
