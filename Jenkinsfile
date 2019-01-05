@@ -36,13 +36,6 @@ throttle(['throttleDocker']) {
           '''
         }
       }
-      finally {
-        stage('Cleanup') {
-          sh '''
-            ./ci/docker-down.sh
-          '''
-        }
-      }
     }
   }
 }
